@@ -38,10 +38,10 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -81,6 +81,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../;../dependencies\boost;D:\ffmpegx64\build\include;../dependencies\tbb\include;../common;../dependencies\RxCpp\include</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles>common/compiler/vs/disable_silly_warnings.h</ForcedIncludeFiles>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -110,6 +113,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ffmpeg\packetsQueue.h" />
+    <ClInclude Include="ffmpeg\ffmpeg.h" />
+    <ClInclude Include="ffmpeg\ffmpeg_error.h" />
+    <ClInclude Include="ffmpeg\ffmpeg_producer_internal.h" />
+    <ClInclude Include="ffmpeg\input.h" />
+    <ClInclude Include="ffmpeg\StdAfx.h" />
+    <ClInclude Include="ffmpeg\util\flv.h" />
+    <ClInclude Include="ffmpeg\util\util.h" />
+    <ClInclude Include="ffmpeg_producer.h" />
+    <ClInclude Include="packetProducer.h" />
+    <ClInclude Include="testFFmpegclass.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ffmpeg\packetsQueue.cpp" />
+    <ClCompile Include="ffmpeg\ffmpeg.cpp" />
+    <ClCompile Include="ffmpeg\ffmpeg_error.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ffmpeg\ffmpeg_producer_internal.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="ffmpeg\input.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="ffmpeg\StdAfx.cpp" />
+    <ClCompile Include="ffmpeg\util\flv.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../StdAfx.h;common/compiler/vs/disable_silly_warnings.h</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="ffmpeg\util\util.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../stdafx.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="ffmpeg_producer.cpp" />
+    <ClCompile Include="testFFmpegclass.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -240,3 +240,4 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/dependencies/boost/stage/lib/win32/libboost_wave-vc140-mt-gd-1_59.lib

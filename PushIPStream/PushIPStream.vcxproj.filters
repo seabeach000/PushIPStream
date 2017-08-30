@@ -13,5 +13,78 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ffmpeg">
+      <UniqueIdentifier>{c083606e-586a-4b31-9fb4-58b9b760fec3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ffmpeg\util">
+      <UniqueIdentifier>{8a57a515-4f45-4a94-905d-9b5d21ac6f75}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="packetProducer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg\ffmpeg.h">
+      <Filter>ffmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg\ffmpeg_error.h">
+      <Filter>ffmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg\input.h">
+      <Filter>ffmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg\StdAfx.h">
+      <Filter>ffmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg\util\flv.h">
+      <Filter>ffmpeg\util</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg\util\util.h">
+      <Filter>ffmpeg\util</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg\ffmpeg_producer_internal.h">
+      <Filter>ffmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg\packetsQueue.h">
+      <Filter>ffmpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="ffmpeg_producer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="testFFmpegclass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ffmpeg\ffmpeg.cpp">
+      <Filter>ffmpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ffmpeg\ffmpeg_error.cpp">
+      <Filter>ffmpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ffmpeg\input.cpp">
+      <Filter>ffmpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ffmpeg\StdAfx.cpp">
+      <Filter>ffmpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ffmpeg\util\flv.cpp">
+      <Filter>ffmpeg\util</Filter>
+    </ClCompile>
+    <ClCompile Include="ffmpeg\util\util.cpp">
+      <Filter>ffmpeg\util</Filter>
+    </ClCompile>
+    <ClCompile Include="ffmpeg\ffmpeg_producer_internal.cpp">
+      <Filter>ffmpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ffmpeg\packetsQueue.cpp">
+      <Filter>ffmpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="ffmpeg_producer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="testFFmpegclass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
