@@ -28,7 +28,7 @@ public:
 		if (packets_.empty())
 			return nullptr;
 		auto packet = packets_.front();
-
+		packets_.pop();
 		return packet;
 	}
 
